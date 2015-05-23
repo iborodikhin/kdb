@@ -1,0 +1,6 @@
+\.*
+/composer.lock
+/vendor/
+/var/log/*.log
+/var/lib/data/*.dat
+/var/lib/data/*.idx
