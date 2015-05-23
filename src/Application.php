@@ -77,7 +77,7 @@ class Application
             $this->logger = new \Monolog\Logger('kdb');
             $this->logger->pushHandler(new \Monolog\Handler\RotatingFileHandler(
                 implode(DIRECTORY_SEPARATOR, [ROOT_DIR, $this->getOption('logDir', 'var/log'), 'kdb.log']),
-                7
+                $this->getOption('logRotate', 7)
             ));
         }
 
