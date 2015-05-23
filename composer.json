@@ -1,0 +1,19 @@
+{
+    "name": "iborodikhin/kdb",
+    "authors": [
+        {
+            "name": "Igor Borodikhin",
+            "email": "iborodikhin@gmail.com"
+        }
+    ],
+  "autoload": {
+    "psr-4": {
+      "Kdb\\": "src/"
+    }
+  },
+    "require": {
+        "iborodikhin/php-glue": "dev-master",
+        "react/react": "0.4.*",
+        "monolog/monolog": "~1.13"
+    }
+}
