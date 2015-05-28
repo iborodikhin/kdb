@@ -18,7 +18,6 @@ class Get extends Request
     public function handle(ReactResponse $response)
     {
         $requestUri = $this->request->getPath();
-
         $data       = $this->glue->read($requestUri);
 
         if (false === $data) {
