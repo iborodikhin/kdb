@@ -15,6 +15,21 @@ class DeleteTest extends Test
             $this->client->delete($this->testData['url'], ['exceptions' => false])->getStatusCode()
         );
 
+        // Check that file deleted successfully
+        $this->assertEquals(
+            404,
+            $this->client->head($this->testData['url'], ['exceptions' => false])->getStatusCode()
+        );
+        $this->assertEquals(
+            404,
+            $this->client->get($this->testData['url'], ['exceptions' => false])->getStatusCode()
+        );
+        $this->assertEquals(
+            404,
+            $this->client->delete($this->testData['url'], ['exceptions' => false])->getStatusCode()
+        );
+
+        // Check that non-existent file would not be deleted
         $this->assertEquals(
             404,
             $this->client->delete(

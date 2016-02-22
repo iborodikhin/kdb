@@ -10,10 +10,14 @@ class GetTest extends Test
      */
     public function testGet()
     {
+        $result = $this->client->get($this->testData['url'], ['exceptions' => false]);
+
         $this->assertEquals(
             200,
-            $this->client->get($this->testData['url'], ['exceptions' => false])->getStatusCode()
+            $result->getStatusCode()
         );
+        $this->assertEquals($this->testData['size'], $result->getBody()->getSize());
+        $this->assertEquals(file_get_contents(__DIR__ . '/../Test.php'), $result->getBody()->getContents());
 
         $this->assertEquals(
             404,

@@ -8,7 +8,7 @@ class HeadTest extends Test
     /**
      * @covers \Kdb\Request\Head::handle
      */
-    public function testGet()
+    public function testHead()
     {
         $this->assertEquals(
             200,
