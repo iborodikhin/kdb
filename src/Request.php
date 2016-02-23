@@ -41,6 +41,10 @@ abstract class Request
     {
         $className = sprintf('\\Kdb\\Request\\%s', ucfirst(strtolower($request->getMethod())));
 
+        if (!class_exists($className)) {
+            $className = '\\Kdb\\Request\\Unknown';
+        }
+
         return new $className($request, $app);
     }
 
