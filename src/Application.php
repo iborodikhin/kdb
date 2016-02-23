@@ -98,6 +98,8 @@ class Application
             $request->getMethod(),
             $request->getPath(),
             count($request->getQuery()) > 0 ? '?' . http_build_query($request->getQuery()) : ''
-        ));
+        ), [
+            'Headers' => $request->getHeaders(),
+        ]);
     }
 }

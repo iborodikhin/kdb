@@ -22,7 +22,7 @@ class Post extends Request
         $requestUri     = $this->request->getPath();
         $requestData    = '';
 
-        if (array_key_exists('Expect', $requestHeaders)) {
+        if ($this->request->expectsContinue()) {
             $response->writeContinue();
         }
 
