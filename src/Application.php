@@ -50,7 +50,7 @@ class Application
             Request::factory($request, $this)->handle($response);
             $this->logRequest($request);
         });
-        $socket->listen($this->getOption('port', 1337));
+        $socket->listen($this->getOption('port', 1337), $this->getOption('host', '127.0.0.1'));
         $loop->run();
     }
 
