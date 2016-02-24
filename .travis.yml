@@ -2,7 +2,6 @@ language: php
 
 before_script:
   - composer update --dev
-  - nohup bin/server
 
 php:
   - 5.4
@@ -11,3 +10,4 @@ php:
 
 script:
  - php vendor/bin/phpunit --configuration phpunit.xml.dist
+ - bin/server &
