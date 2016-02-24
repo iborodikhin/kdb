@@ -9,5 +9,5 @@ php:
   - 5.6
 
 script:
- - php vendor/bin/phpunit --configuration phpunit.xml.dist
  - bin/server &
+ - php vendor/bin/phpunit --configuration phpunit.xml.dist
