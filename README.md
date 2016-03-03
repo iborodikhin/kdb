@@ -1,4 +1,5 @@
 # KDB (Koraduba) #
+[![Build Status](https://travis-ci.org/iborodikhin/kdb.png?branch=master)](https://travis-ci.org/iborodikhin/kdb)
 
 ## About ##
 
